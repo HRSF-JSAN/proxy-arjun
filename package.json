@@ -8,7 +8,7 @@
   "scripts": {
     "test": "jest",
     "start-express": "nodemon -i ./public/reviews server.js",
-    "start" : "nodemon  server/httpServer/nodeServer.js",
+    "start": "nodemon  server/httpServer/nodeServer.js",
     "build": "webpack -d -w"
   },
   "repository": {
