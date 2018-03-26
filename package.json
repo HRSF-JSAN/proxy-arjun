@@ -5,10 +5,11 @@
     "verbose": true
   },
   "description": "title-map proxy server",
-  "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "node server.js"
+    "start-express": "nodemon -i ./public/reviews server.js",
+    "start": "nodemon  server/httpServer/nodeServer.js",
+    "build": "webpack -d -w"
   },
   "repository": {
     "type": "git",
@@ -17,16 +18,19 @@
   "author": "Michael Durfey",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "jest": "^22.4.2",
+    "newrelic": "^3.2.0",
+    "node-fetch": "^2.1.1",
     "pug": "^2.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "redis": "^2.8.0",
     "request": "^2.83.0",
     "supertest": "^3.0.0",
-    "webpack": "^3.11.0",
     "yelp-fusion": "^2.0.3"
   },
   "bugs": {
@@ -34,9 +38,18 @@
   },
   "homepage": "https://github.com/MichaelDurfey/FoodiGo#readme",
   "devDependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.11.1",
+    "eslint": "^4.18.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.12.2",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "webpack": "^3.11.0",
+    "webpack-node-externals": "^1.2.0"
   }
 }
