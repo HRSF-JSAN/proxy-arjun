@@ -7,8 +7,8 @@
   "description": "title-map proxy server",
   "scripts": {
     "test": "jest",
-    "start-express": "nodemon -i ./public/reviews server.js",
-    "start" : "nodemon  server/httpServer/nodeServer.js",
+    "start-express": "node -i ./public/reviews server.js",
+    "start": "node server/httpServer/serverHelpers.js && node server/httpServer/nodeServer.js",
     "build": "webpack -d -w"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "jest": "^22.4.2",
+    "jquery": "^3.3.1",
     "newrelic": "^3.2.0",
     "node-fetch": "^2.1.1",
     "pug": "^2.0.0",
